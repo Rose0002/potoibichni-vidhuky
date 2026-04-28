@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Потойбічні Відгуки</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" onclick="createStars(event)">Головна</a>
+            <a href="#books" onclick="createStars(event)">Книги</a>
+            <a href="#manga" onclick="createStars(event)">Манґи</a>
+            <a href="#" onclick="openContacts(event)">Контакти</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>♡ Потойбічні Відгуки ♡</h1>
+            <p>Місце, де оживають історії…</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Про сайт</h2>
+                <p>Вітаємо у нашому цифровому притулку. Цей проект — не просто збірка відгуків, а спроба створити місток
+                    між читачем та магією слова. Тут ми ділимося історіями, що вразили наше серце, та манґою, яка
+                    змінила наше сприйняття світу.</p>
+                <p>Кожен відгук — це частинка нашої душі, записана для того, щоб ви могли знайти свою ідеальну історію у
+                    безмежному морі літератури. Ласкаво просимо до нашого світу!</p>
+            </div>
+        </section>
+
+        <div id="books" class="mt-5">
+            <h2 class="section-title" id="books">Книги</h2>
+            <div class="cards-vertical">
+                <a href="reviews/book1.html" class="card-3x4"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hp-cover.jpg'); background-size: cover;">
+                    <span>Гаррі Поттер</span>
+                </a>
+                <a href="reviews/book2.html" class="card-3x4"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/mr-cover.jpg'); background-size: cover;">
+                    <span>Той, що біжить лабіринтом</span>
+                </a>
+                <a href="reviews/book3.html" class="card-3x4"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/vuh-cover.jpg'); background-size: cover;">
+                    <span>Варта у Грі</span>
+                </a>
+            </div>
+        </div>
+        <div id="manga" class="mt-5">
+            <h2 class="section-title">Манґи</h2>
+            <div class="cards-vertical">
+                <a href="reviews/manga1.html" class="card-3x4"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/gi-cover.jpg'); background-size: cover;">
+                    <span>Grimoire of Zero</span>
+                </a>
+                <a href="reviews/manga2.html" class="card-3x4"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/nch-cover.jpg'); background-size: cover;">
+                    <span>Mahoutsukai no Yome</span>
+                </a>
+                <a href="reviews/manga3.html" class="card-3x4"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/gi-cover.jpg'); background-size: cover;">
+                    <span>Genshin Impact</span>
+                </a>
+            </div>
+        </div>
+        <section class="comment-section"> 
+            <img src="images/kalyna.png" class="kalyna-left">
+            <img src="images/kalyna.png" class="kalyna-right">
+            <div class="comment-form">
+                <h2 class="section-title">Залишити коментар</h2>
+                <textarea id="commentInput" class="form-control bg-dark text-white mb-3"></textarea>
+                <button onclick="addComment()" class="btn btn-outline-light rounded-pill px-4">Надіслати</button>
+                <div id="commentsList" class="mt-4"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer-global">
+        <p>© Потойбічні Відгуки</p>
+    </footer>
+
+    <div id="contactsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContacts()">&times;</span>
+            <p>«Ми там, де шелестять сторінки, де в темряві сяють зірки... Шукайте нас в серці історій, у вимірах снів і
+                героїв.»</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
