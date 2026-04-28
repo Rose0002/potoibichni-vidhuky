@@ -75,4 +75,14 @@ function toggleLike() {
         countSpan.innerText = currentCount - 1;
         btn.innerHTML = "❤ Подобається";
     }
+
+    const isManga = btn.classList.contains('like-btn-manga');
+
+    if (btn.classList.contains('active')) {
+        countSpan.innerText = currentCount + 1;
+        btn.innerHTML = isManga ? "🔥 Ви оцінили" : "❤ Ви оцінили";
+    } else {
+        countSpan.innerText = currentCount - 1;
+        btn.innerHTML = isManga ? "🔥 Оцінити" : "❤ Подобається";
+    }
 }
