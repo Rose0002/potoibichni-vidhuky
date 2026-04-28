@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгук: Genshin Impact (Манґа)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .manga-text {
+            line-height: 1.9;
+            font-size: 1.1rem;
+            text-align: justify;
+            color: #e0f0ff;
+            border-left: 3px solid #ff00ff;
+            padding-left: 20px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .manga-accent {
+            color: #ff00ff;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+        }
+
+        .like-btn-manga {
+            background: rgba(255, 0, 255, 0.1);
+            border: 2px solid #ff00ff;
+            color: #ff00ff;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .like-btn-manga.active {
+            background: #ff00ff;
+            color: #fff;
+            box-shadow: 0 0 30px #ff00ff;
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(180deg, #0d0d0d, #1a0f1f); min-height: 100vh;">
+
+    <header>
+        <nav>
+            <a href="../index.html" onclick="createStars(event)">Головна</a>
+            <a href="../index.html#books" onclick="createStars(event)">Книги</a>
+            <a href="../index.html#manga" onclick="createStars(event)">Манґи</a>
+            <a href="#" onclick="openContacts(event)">Контакти</a>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-8">
+                <h1 class="section-title mb-5" style="color: #ff00ff; text-shadow: 0 0 15px #ff00ff;">Genshin Impact
+                </h1>
+
+                <div class="manga-text">
+                    <p>Манґа по <span class="manga-accent">«Genshin Impact»</span> найбільше сподобалася мені саме через
+                        персонажів і те, як вона розкриває їх глибше, ніж це показано в самій грі. Особливо цікаво було
+                        спостерігати за <span class="manga-accent">Коллеї</span> — її історія реально вибиває з легкого
+                        пригодницького настрою і додає темряви. Те, через що вона пройшла, робить її персонажем із
+                        травмами і внутрішньою боротьбою.</p>
+
+                    <p>Також дуже сподобалося, як показали <span class="manga-accent">Ділюка і Кейю</span>. У грі їхні
+                        стосунки відчуваються напруженими, але манґа дає більше контексту і показує, звідки це все
+                        пішло. Бачити їх у більш молодому віці — це додає емоцій і робить їх конфлікт зрозумілим, а не
+                        просто «вони не ладнають».</p>
+
+                    <p>Загалом, манґа по Genshin Impact відчувається як більш <span class="manga-accent">темна і
+                            серйозна</span> сторона цього світу. Вона показує, що за яскравими містами і пригодами
+                        стоять жорстокі експерименти, втрати і складні рішення. І саме це мені найбільше зайшло —
+                        відчуття, що цей світ не такий вже й казковий, як може здатися спочатку.</p>
+                </div>
+
+                <div class="text-center my-5">
+                    <button id="likeBtn" class="like-btn-manga" onclick="toggleLike()">🔥 Оцінити</button>
+                    <div class="mt-2" style="color: #ff00ff; font-size: 0.9rem;">
+                        Рейтинг: <span id="likeCount">0</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title h4 mt-5 mb-4" style="color: #ff00ff;">Інша сторона Тейвату</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-4"><img src="../images/gi1.jpg" class="img-fluid rounded shadow" alt="Genshin 1">
+                    </div>
+                    <div class="col-4"><img src="../images/gi2.jpg" class="img-fluid rounded shadow" alt="Genshin 2">
+                    </div>
+                    <div class="col-4"><img src="../images/gi3.jpg" class="img-fluid rounded shadow" alt="Genshin 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-global mt-5">
+        <p>© Потойбічні Відгуки</p>
+    </footer>
+
+    <div id="contactsModal" class="modal">
+        <div class="modal-content"><span class="close" onclick="closeContacts()">&times;</span>
+            <p>«Ми там, де шелестять сторінки...»</p>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

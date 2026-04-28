@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгук: Варта у Грі</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .magic-text {
+            line-height: 1.9;
+            font-size: 1.15rem;
+            text-align: justify;
+            color: #f0e6ff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        .highlight-text {
+            color: #d6b3ff;
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(214, 179, 255, 0.4);
+        }
+
+        .like-container {
+            margin: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .like-btn-new {
+            background: rgba(214, 179, 255, 0.1);
+            border: 2px solid #d6b3ff;
+            color: #d6b3ff;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+
+        .like-btn-new.active {
+            background: #d6b3ff;
+            color: #1a0f1f;
+            box-shadow: 0 0 25px #d6b3ff;
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(180deg, #0d0d0d, #1a0f1f); min-height: 100vh;">
+
+    <header>
+        <nav>
+            <a href="../index.html" onclick="createStars(event)">Головна</a>
+            <a href="../index.html#books" onclick="createStars(event)">Книги</a>
+            <a href="../index.html#manga" onclick="createStars(event)">Манґа</a>
+            <a href="#" onclick="openContacts(event)">Контакти</a>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-8">
+                <h1 class="section-title mb-5">Варта у Грі</h1>
+
+                <div class="magic-text">
+                    <p><span class="highlight-text">«Варта у Грі»</span> — це трилогія про темну чаклунку зі Львова, яка
+                        потрапляє у вир подій і намагається з них вибратися. Українське фентезі з магією, любов’ю та
+                        пригодами? Я в захваті! Мрію колись почитати й інші книги цієї авторки, бо впевнена, що вони
+                        сподобаються мені не менше.</p>
+
+                    <p>Я просто-таки закохана в головних героїв: надійний <span class="highlight-text">Еверест</span>,
+                        сміливий <span class="highlight-text">Бурштин</span>, кумедна <span
+                            class="highlight-text">Дикоросла</span>, улюблений <span
+                            class="highlight-text">Златан</span> і просто найкраща <span
+                            class="highlight-text">Варта</span>. Взаємодія між ними змушувала моє серце тьохкати, а
+                        сюжет плутав думки (у хорошому сенсі). Три книги, три міста, одна історія любові та щасливий
+                        фінал — ось секрет успіху цієї трилогії для мене.</p>
+
+                    <p>Так уже вийшло, що першою мені до рук потрапила друга частина. Після її прочитання я закохалася в
+                        персонажів, а коли через рік змогла прочитати першу частину — вже щиро їх любила. Всесвіт,
+                        створений авторкою, і <span class="highlight-text">рідні вулички Львова</span> — це найкраще, що
+                        тільки могло зі мною трапитися.</p>
+                </div>
+
+                <div class="like-container">
+                    <button id="likeBtn" class="like-btn-new" onclick="toggleLike()">❤ Подобається</button>
+                    <div style="font-size: 0.9rem; color: #d6b3ff; opacity: 0.8;">
+                        Цей відгук оцінили: <span id="likeCount">0</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title h4 mt-5 mb-4">Львівська Магія</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-4"><img src="../images/vuh1.jpg"
+                            class="img-fluid rounded shadow-lg border border-dark" alt="Варта 1"></div>
+                    <div class="col-4"><img src="../images/vuh2.jpg"
+                            class="img-fluid rounded shadow-lg border border-dark" alt="Варта 2"></div>
+                    <div class="col-4"><img src="../images/vuh3.jpg"
+                            class="img-fluid rounded shadow-lg border border-dark" alt="Варта 3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-global mt-5">
+        <p>© Потойбічні Відгуки</p>
+    </footer>
+
+    <div id="contactsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeContacts()">&times;</span>
+            <p>«Ми там, де шелестять сторінки, де в темряві сяють зірки... Шукайте нас в серці історій... Щасливі.»</p>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>

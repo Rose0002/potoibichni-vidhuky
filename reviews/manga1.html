@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Відгук: Grimoire of Zero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .manga-text {
+            line-height: 1.9;
+            font-size: 1.1rem;
+            text-align: justify;
+            color: #e0f0ff;
+            border-left: 3px solid #ff00ff;
+            padding-left: 20px;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+        }
+
+        .manga-accent {
+            color: #ff00ff;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+        }
+
+        .like-btn-manga {
+            background: rgba(255, 0, 255, 0.1);
+            border: 2px solid #ff00ff;
+            color: #ff00ff;
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.4s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .like-btn-manga.active {
+            background: #ff00ff;
+            color: #fff;
+            box-shadow: 0 0 30px #ff00ff;
+        }
+    </style>
+</head>
+
+<body style="background: linear-gradient(180deg, #0d0d0d, #1a0f1f); min-height: 100vh;">
+
+    <header>
+        <nav>
+            <a href="../index.html" onclick="createStars(event)">Головна</a>
+            <a href="../index.html#books" onclick="createStars(event)">Книги</a>
+            <a href="../index.html#manga" onclick="createStars(event)">Манґи</a>
+            <a href="#" onclick="openContacts(event)">Контакти</a>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-8">
+                <h1 class="section-title mb-5" style="color: #ff00ff; text-shadow: 0 0 15px #ff00ff;">Grimoire of Zero
+                </h1>
+
+                <div class="manga-text">
+                    <p><span class="manga-accent">«Grimoire of Zero»</span> залишила в мене дуже тепле, але трохи дивне
+                        відчуття після прочитання. З одного боку — це ніби проста історія про подорож і магію, але з
+                        іншого — вона чіпляє саме взаємодією персонажів. Найбільше мені сподобалося, як поступово
+                        розвиваються стосунки між <span class="manga-accent">Зеро</span> і найманцем: спочатку це
+                        виглядає як вимушений союз, але з часом між ними з’являється довіра і навіть щось більше.</p>
+
+                    <p>Світ у манзі теж заслуговує уваги. Він не виглядає казково-ідеальним — навпаки, тут є страх перед
+                        магією, упередження і жорстокість до тих, хто відрізняється. Це додає історії більш серйозного
+                        настрою і робить її цікавішою, ніж просто чергове фентезі про пригоди. Особливо сподобалося, як
+                        показано тему <span class="manga-accent">відьом</span> і те, як люди до них ставляться — це
+                        створює напругу протягом всієї історії.</p>
+
+                    <p>Загалом, «Grimoire of Zero» — це не тільки про магію, а й про прийняття, довіру і пошук свого
+                        місця у світі. Вона не перевантажена складним сюжетом, але саме за рахунок атмосфери і
+                        персонажів добре запам’ятовується. Після прочитання залишається відчуття легкої меланхолії і
+                        бажання ще трохи побути в цьому світі.</p>
+                </div>
+
+                <div class="text-center my-5">
+                    <button id="likeBtn" class="like-btn-manga" onclick="toggleLike()">🔥 Оцінити</button>
+                    <div class="mt-2" style="color: #ff00ff; font-size: 0.9rem;">
+                        Рейтинг: <span id="likeCount">0</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title h4 mt-5 mb-4" style="color: #ff00ff;">Фрагменти подорожі</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-4"><img src="../images/goz1.jpg" class="img-fluid rounded shadow" alt="Zero 1">
+                    </div>
+                    <div class="col-4"><img src="../images/goz2.jpg" class="img-fluid rounded shadow" alt="Zero 2">
+                    </div>
+                    <div class="col-4"><img src="../images/goz3.jpg" class="img-fluid rounded shadow" alt="Zero 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-global mt-5">
+        <p>© Потойбічні Відгуки</p>
+    </footer>
+
+    <div id="contactsModal" class="modal">
+        <div class="modal-content"><span class="close" onclick="closeContacts()">&times;</span>
+            <p>«Ми там, де шелестять сторінки...»</p>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
