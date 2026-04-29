@@ -66,15 +66,7 @@ function toggleLike() {
     if (!btn || !countSpan) return;
 
     btn.classList.toggle('active');
-    let currentCount = parseInt(countSpan.innerText);
-
-    if (btn.classList.contains('active')) {
-        countSpan.innerText = currentCount + 1;
-        btn.innerHTML = "❤ Ви оцінили"; 
-    } else {
-        countSpan.innerText = currentCount - 1;
-        btn.innerHTML = "❤ Подобається";
-    }
+    let currentCount = parseInt(countSpan.innerText) || 0;
 
     const isManga = btn.classList.contains('like-btn-manga');
 
